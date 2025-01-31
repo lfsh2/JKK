@@ -120,6 +120,7 @@ header {
         .toggle-btn {
             display: none;
             background: none;
+			color: black;
             border: none;
             font-size: 1rem;
             cursor: pointer;
@@ -142,14 +143,17 @@ header {
             flex-direction: column;
         }
 
-        .nav-btn {
+        .nav-btn, .user-login button {
             width: 100%;
             padding: 20px;
             background: none;
+			outline: none;
+			border: none;
             color: white;
             text-align: left;
             font-size: 1rem;
             text-decoration: none;
+			cursor: pointer;
         }
 
         .service {
@@ -234,7 +238,7 @@ header {
                 display: none;
             }
     
-            .admin-login {
+            .user-login {
                 display: none;
             }
     
@@ -247,4 +251,23 @@ header {
             display: block;
         }
     }
+}
+
+
+.navbar .user-login button {
+	padding: 5px 30px;
+	border: 2px solid black;
+	border-radius: 20px;
+	background: none;
+	color: black;
+	font-size: 1rem;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 500ms;
+}
+.user-login button:hover {
+	background: black;
+	color: white;
 }

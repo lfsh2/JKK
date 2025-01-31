@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();
             
             echo "Your account has been verified successfully!";
-            header("Location: login.php");
+            header("Location: http://localhost/jkk/index.php");
             exit();
         } else {
             echo "Error in creating your account: " . $conn->error;

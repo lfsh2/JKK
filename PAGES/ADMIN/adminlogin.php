@@ -41,14 +41,14 @@
 
         <div class="form">
             <form action="" method="POST">
-                <nav>
+                <!--<nav>
                     <a href="../../PAGES/ADMIN/login.php">User</a>
                     <a href="../../PAGES/ADMIN/adminlogin.php">Admin</a>
-                </nav>
+                </nav>-->
 
                 <img src="../../ASSETS/logo.png" alt="">
 
-                <h1>Login as Admin</h1>
+               
                 
                 <div class="input-block">
                     <input type="text" name="username" id="username" placeholder=" " required>
@@ -60,42 +60,54 @@
                 </div>
 
                 <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                session_start();
+                if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     $username = trim($_POST['username']);
                     $password = trim($_POST['password']);
 
                     $conn = new mysqli("localhost", "root", "", "jjk");
 
                     if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                    }
-
-                    $sql = "SELECT * FROM users WHERE username = ?";
-                    $stmt = $conn->prepare($sql);
-                    $stmt->bind_param("s", $username);
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-
-                    if ($result->num_rows > 0) {
-                        $user = $result->fetch_assoc();
-
-                        if (password_verify($password, $user['password'])) {
-                            header("Location: adminpanel.php");
-                            exit();
-                        } else {
-                            echo "<div class='error'>Incorrect password.</div>";
-                        }
+                        echo "<div class='error'>Connection failed: " . htmlspecialchars($conn->connect_error) . "</div>";
                     } else {
-                        echo "<div class='error'>Username not found.</div>";
-                    }
+                        $sql = "SELECT * FROM users WHERE username = ?";
+                        if ($stmt = $conn->prepare($sql)) {
+                            $stmt->bind_param("s", $username);
+                            $stmt->execute();
+                            $result = $stmt->get_result();
 
-                    $stmt->close();
-                    $conn->close();
+                            if ($result->num_rows > 0) {
+                                $user = $result->fetch_assoc();
+
+                                if (password_verify($password, $user['password'])) {
+                                    $_SESSION['admin_logged_in'] = true;
+                                    $_SESSION['username'] = $user['username'];
+                                    echo "<script>window.location.href = 'adminpanel.php';</script>";
+                                    exit();
+                                } else {
+                                    echo "<div class='error'>Incorrect password.</div>";
+                                }
+                            } else {
+                                echo "<div class='error'>Username not found.</div>";
+                            }
+
+                            $stmt->close();
+                        } else {
+                            echo "<div class='error'>Error preparing the query.</div>";
+                        }
+                        
+                        $conn->close();
+                    }
                 }
                 ?>
+
+
                 <button type="submit">Login</button>
             </form>
         </div>
     </div>
 </body>
 </html>
+
+
+

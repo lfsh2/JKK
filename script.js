@@ -5,6 +5,25 @@ function toggle() {
 }
 
 
+// Toggle Login Modal
+function toggleLoginModal() {
+	const modal = document.getElementById('login-modal');
+	modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+}
+
+function toggleLoginModal() {
+	const modal = document.getElementById('login-modal');
+	modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+}
+
+// Close modal if clicking outside of content
+window.onclick = function(event) {
+	const modal = document.getElementById('login-modal');
+	if (event.target === modal) {
+		modal.style.display = 'none';
+	}
+};
+
 // services button in navbar
 const submenuToggles = document.querySelectorAll('.submenu-toggle');
 

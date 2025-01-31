@@ -1,137 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JJK Construction Services</title>
-        <link rel="shortcut icon" href="../../../ASSETS/logo.png" type="image/x-icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="stylesheet" href="../../../CSS/navbar.css">
-        <link rel="stylesheet" href="../../../CSS/chatbot.css">
-        <link rel="stylesheet" href="../../../CSS/footer.css">
-        <link rel="stylesheet" href="../../../CSS/services.css">
-        <style>
-            .chat-bot {
-                .chat {
-                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../../ASSETS/chatbotbg.png');
-                    background-position: bottom;
-                    background-size: cover;
-                }
-            }
-            footer {
-                .footer-appointment {
-                    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../../../ASSETS/appointmentbg.jpg');
-                }
-            }
-            
-            .build {
-                .first-section {
-                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../ASSETS/landingbg.jpg');
-                    background-position: center;
-                    background-size: cover;
-                }
-            }
 
-        </style>
-    </head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JJK Construction Services</title>
+	<link rel="shortcut icon" href="../../../ASSETS/logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="../../../CSS/navbar.css">
+	<link rel="stylesheet" href="../../../CSS/chatbot.css">
+	<link rel="stylesheet" href="../../../CSS/footer.css">
+	<link rel="stylesheet" href="../../../CSS/services.css">
+	<style>
+		.chat-bot {
+			.chat {
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../../ASSETS/chatbotbg.png');
+				background-position: bottom;
+				background-size: cover;
+			}
+		}
 
-    <body>
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="../../../ASSETS/logo.png" alt="">
-                </div>
-    
-                <ul class="links">
-                    <a href="../../../home.php">HOME</a>
-                    <a href="../../../PAGES/about.php">ABOUT</a>
+		footer {
+			.footer-appointment {
+				background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../../../ASSETS/appointmentbg.jpg');
+			}
+		}
 
-                    <div class="dropdown">
-                        <a href="../../../PAGES/SERVICES/services.php" class="service-btn">SERVICES</a>
+		.build {
+			.first-section {
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../ASSETS/landingbg.jpg');
+				background-position: center;
+				background-size: cover;
+			}
+		}
+	</style>
+</head>
 
-                        <div class="dropdown-block">
-                            <div class="dropdown-content">
-                                <button class="submenu-toggle" data-submenu="submenu1">Build</button>
-                                <div class="submenu" id="submenu1">
-                                    <a href="../../../PAGES/SERVICES/BUILD/newbuild.php">New Build</a>
-                                    <a href="../../../PAGES/SERVICES/BUILD/renovation.php">Renovation</a>
-                                    <a href="../../../PAGES/SERVICES/BUILD/knockdownandrebuild.php">Knockdown and Rebuild</a>
-                                    <a href="../../../PAGES/SERVICES/BUILD/electricalinstallation.php">Electrical Installation</a>
-                                </div>
+<body>
+	<header>
+		<nav class="navbar">
+			<div class="logo">
+				<img src="../../../ASSETS/logo.png" alt="Logo">
+			</div>
 
-                                <button class="submenu-toggle" data-submenu="submenu2">Design</button>
-                                <div class="submenu" id="submenu2">
-                                    <a href="../../../PAGES/SERVICES/DESIGN/architectural.php">Architectural Design</a>
-                                    <a href="../../../PAGES/SERVICES/DESIGN/structural.php">Structural Design</a>
-                                    <a href="../../../PAGES/SERVICES/DESIGN/electrical.php">Electrical Design</a>
-                                    <a href="../../../PAGES/SERVICES/DESIGN/interior.php">Interior Design</a>
-                                </div>
+			<ul class="links">
+				<a href="../../../index.php">HOME</a>
+				<a href="../../../PAGES/about.php">ABOUT</a>
+				<div class="dropdown">
+					<a href="../../../PAGES/SERVICES/services.php" class="service-btn">SERVICES</a>
 
-                                <button class="submenu-toggle" data-submenu="submenu3">Consultation</button>
-                                <div class="submenu" id="submenu3">
-                                    <a href="../../../PAGES/SERVICES/CONSULTATION/propertyinspection.php">Property Inspection</a>
-                                    <a href="../../../PAGES/SERVICES/CONSULTATION/conceptual.php">Conceptual Cost Estimate</a>
-                                    <a href="../../../PAGES/SERVICES/CONSULTATION/projectinception.php">Project Inception</a>
-                                </div>
-                                
-                                <a href="../../../PAGES/SERVICES/projectmanagement.php">Project Management</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="../../../PAGES/projects.php">PROJECTS</a>
-                </ul>
-    
-                <div class="admin-login">
-                    <a href="../../../PAGES/ADMIN/login.php">LOGIN</a>
-                </div>
-    
-                <button class="toggle-btn" onclick="toggle()"><i class="fa-solid fa-bars"></i></button>
-            </nav>
+					<div class="dropdown-block">
+						<div class="dropdown-content">
+							<button class="submenu-toggle" data-submenu="submenu1">Build</button>
+							<div class="submenu" id="submenu1">
+								<a href="../../../PAGES/SERVICES/BUILD/newbuild.php">New Build</a>
+								<a href="../../../PAGES/SERVICES/BUILD/renovation.php">Renovation</a>
+								<a href="../../../PAGES/SERVICES/BUILD/knockdownandrebuild.php">Knockdown and Rebuild</a>
+								<a href="../../../PAGES/SERVICES/BUILD/electricalinstallation.php">Electrical Installation</a>
+							</div>
 
-            <div class="responsive-links" id="responsive-dropdown">
-                <ul class="links">
-                    <a href="../../../home.php" class="nav-btn">HOME</a>
-                    <a href="../../../PAGES/about.php" class="nav-btn">ABOUT</a>
-                    <div class="dropdown" id="responsiveDropdown">
-                        <a href="../../SERVICES/services.php" class="nav-btn service">SERVICES <i class="fa-solid fa-chevron-down"></i></a>
-    
-                        <div class="dropdown-content">
-                            <div class="dropdown-subMenu" id="subMenu1">
-                                <button onclick="toggleResponsiveSubmenu('subMenu1')" class="nav-btn">Build <i class="fa-solid fa-chevron-down"></i></button>
-                                <div class="submenu-content">
-                                    <a href="../../../PAGES/SERVICES/BUILD/newbuild.php" class="nav-btn">New Build</a>
-                                    <a href="../../../PAGES/SERVICES/BUILD/renovation.php" class="nav-btn">Renovation</a>
-                                    <a href="../../../PAGES/SERVICES/BUILD/knockdownandrebuild.php" class="nav-btn">Knockdown and Rebuild</a>
-                                    <a href="../../../PAGES/SERVICES/BUILD/electricalinstallation.php" class="nav-btn">Electrical Installation</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-subMenu" id="subMenu2">
-                                <button onclick="toggleResponsiveSubmenu('subMenu2')" class="nav-btn">Design <i class="fa-solid fa-chevron-down"></i></button>
-                                <div class="submenu-content">
-                                    <a href="../../../PAGES/SERVICES/DESIGN/architectural.php" class="nav-btn">Architectural Design</a>
-                                    <a href="../../../PAGES/SERVICES/DESIGN/structural.php" class="nav-btn">Structural Design</a>
-                                    <a href="../../../PAGES/SERVICES/DESIGN/electrical.php" class="nav-btn">Electrical Design</a>
-                                    <a href="../../../PAGES/SERVICES/DESIGN/interior.php" class="nav-btn">Interior Design</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-subMenu" id="subMenu3">
-                                <button onclick="toggleResponsiveSubmenu('subMenu3')" class="nav-btn">Consultation <i class="fa-solid fa-chevron-down"></i></button>
-                                <div class="submenu-content">
-                                    <a href="../../../PAGES/SERVICES/CONSULTATION/propertyinspection.php" class="nav-btn">Property Inspection</a>
-                                    <a href="../../../PAGES/SERVICES/CONSULTATION/conceptual.php" class="nav-btn">Conceptual Cost Estimate</a>
-                                    <a href="../../../PAGES/SERVICES/CONSULTATION/projectinception.php" class="nav-btn">Project Inception</a>
-                                </div>
-                            </div>
-                            <a href="../../../PAGES/SERVICES/projectmanagement.php" class="nav-btn service project"><p>Project</p> <p>Management</p></a>
-                        </div>
-                    </div>
-                    <a href="../../../PAGES/projects.php" class="nav-btn">PROJECTS</a>
-                    <a href="../../../PAGES/ADMIN/login.php" class="nav-btn">LOGIN</a>
-                </ul>
-            </div>
-        </header>
+							<button class="submenu-toggle" data-submenu="submenu2">Design</button>
+							<div class="submenu" id="submenu2">
+								<a href="../../../PAGES/SERVICES/DESIGN/architectural.php">Architectural Design</a>
+								<a href="../../../PAGES/SERVICES/DESIGN/structural.php">Structural Design</a>
+								<a href="../../../PAGES/SERVICES/DESIGN/electrical.php">Electrical Design</a>
+								<a href="../../../PAGES/SERVICES/DESIGN/interior.php">Interior Design</a>
+							</div>
 
-        
+							<button class="submenu-toggle" data-submenu="submenu3">Consultation</button>
+							<div class="submenu" id="submenu3">
+								<a href="../../../PAGES/SERVICES/CONSULTATION/propertyinspection.php">Property Inspection</a>
+								<a href="../../../PAGES/SERVICES/CONSULTATION/conceptual.php">Conceptual Cost Estimate</a>
+								<a href="../../../PAGES/SERVICES/CONSULTATION/projectinception.php">Project Inception</a>
+							</div>
+							
+							<a href="../../../PAGES/SERVICES/projectmanagement.php">Project Management</a>
+						</div>
+					</div>
+				</div>
+				<a href="../../../PAGES/projects.php">PROJECTS</a>
+			</ul>
+
+			<!-- LOGIN modal trigger inside header -->
+			<div class="user-login">
+				<!-- <button onclick="toggleLoginModal()">Login</button> -->
+			</div>
+
+			<button class="toggle-btn" onclick="toggle()"><i class="fa-solid fa-bars"></i></button>
+		</nav>
+
+
+		<div class="responsive-links" id="responsive-dropdown">
+			<ul class="links">
+				<a href="../../../home.php" class="nav-btn">HOME</a>
+				<a href="../../../PAGES/about.php" class="nav-btn">ABOUT</a>
+				<div class="dropdown" id="responsiveDropdown">
+					<a href="../../../PAGES/SERVICES/services.php" class="nav-btn service">SERVICES <i class="fa-solid fa-chevron-down"></i></a>
+
+					<div class="dropdown-content">
+						<div class="dropdown-subMenu" id="subMenu1">
+							<button onclick="toggleResponsiveSubmenu('subMenu1')" class="nav-btn">Build <i class="fa-solid fa-chevron-down"></i></button>
+							<div class="submenu-content">
+								<a href="../../../PAGES/SERVICES/BUILD/newbuild.php" class="nav-btn">New Build</a>
+								<a href="../../../PAGES/SERVICES/BUILD/renovation.php" class="nav-btn">Renovation</a>
+								<a href="../../../PAGES/SERVICES/BUILD/knockdownandrebuild.php" class="nav-btn">Knockdown and Rebuild</a>
+								<a href="../../../PAGES/SERVICES/BUILD/electricalinstallation.php" class="nav-btn">Electrical Installation</a>
+							</div>
+						</div>
+						<div class="dropdown-subMenu" id="subMenu2">
+							<button onclick="toggleResponsiveSubmenu('subMenu2')" class="nav-btn">Design <i class="fa-solid fa-chevron-down"></i></button>
+							<div class="submenu-content">
+								<a href="../../../PAGES/SERVICES/DESIGN/architectural.php" class="nav-btn">Architectural Design</a>
+								<a href="../../../PAGES/SERVICES/DESIGN/structural.php" class="nav-btn">Structural Design</a>
+								<a href="../../../PAGES/SERVICES/DESIGN/electrical.php" class="nav-btn">Electrical Design</a>
+								<a href="../../../PAGES/SERVICES/DESIGN/interior.php" class="nav-btn">Interior Design</a>
+							</div>
+						</div>
+						<div class="dropdown-subMenu" id="subMenu3">
+							<button onclick="toggleResponsiveSubmenu('subMenu3')" class="nav-btn">Consultation <i class="fa-solid fa-chevron-down"></i></button>
+							<div class="submenu-content">
+								<a href="../../../PAGES/SERVICES/CONSULTATION/propertyinspection.php" class="nav-btn">Property Inspection</a>
+								<a href="../../../PAGES/SERVICES/CONSULTATION/conceptual.php" class="nav-btn">Conceptual Cost Estimate</a>
+								<a href="../../../PAGES/SERVICES/CONSULTATION/projectinception.php" class="nav-btn">Project Inception</a>
+							</div>
+						</div>
+						<a href="../../../PAGES/SERVICES/projectmanagement.php" class="nav-btn service project">
+							<p>Project</p>
+							<p>Management</p>
+						</a>
+					</div>
+				</div>
+				<a href="../../../PAGES/projects.php" class="nav-btn">PROJECTS</a>
+				 
+				<!-- <div class="user-login">
+					<button onclick="toggleLoginModal()">Login</button>
+				</div> -->
+			</ul>
+		</div>
+
+		
+	</header>
+
+	<!--
         <button class="chatbot-btn" onclick="toggleChatbot()">
             <img src="../../../ASSETS/chatbot.png" alt="">
         </button>
@@ -191,102 +201,103 @@
                     <button type="submit">Send</button>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 
-        <div class="property build">
-            <div class="first-section">
-                <h1>Our Services</h1>
-                <h4>Property Inspection</h4>
-            </div>
+	<div class="property build">
+		<div class="first-section">
+			<h1>Our Services</h1>
+			<h4>Property Inspection</h4>
+		</div>
 
-            <div class="second-section">
-                <div class="text-block">
-                    <h1>Consultancy Services for Property Inspection</h1>
+		<div class="second-section">
+			<div class="text-block">
+				<h1>Consultancy Services for Property Inspection</h1>
 
-                    <p>JKK Construction Services offers comprehensive property inspection services designed to ensure that your real estate investment is thoroughly evaluated and meets all safety, structural, and compliance standards.</p>
-                    <p>Our professional inspectors are equipped with the latest tools and industry knowledge to deliver detailed, accurate, and unbiased assessments.</p>
-                    <p> Whether you are buying, selling, or maintaining a property, JKK Construction Services provides the insights you need to make informed decisions.</p>
-                </div>
+				<p>JKK Construction Services offers comprehensive property inspection services designed to ensure that your real estate investment is thoroughly evaluated and meets all safety, structural, and compliance standards.</p>
+				<p>Our professional inspectors are equipped with the latest tools and industry knowledge to deliver detailed, accurate, and unbiased assessments.</p>
+				<p> Whether you are buying, selling, or maintaining a property, JKK Construction Services provides the insights you need to make informed decisions.</p>
+			</div>
 
-                <div class="img-block">
-                    <img src="../../../ASSETS/services/serviceupper.jpg" alt="">
-                </div>
-            </div>
+			<div class="img-block">
+				<img src="../../../ASSETS/services/serviceupper.jpg" alt="">
+			</div>
+		</div>
 
-            <div class="third-section">
-                <div class="card-block">
-                    <div class="card">
-                        <div class="img-block">
-                            <img src="../../../ASSETS/services/Consultation/property1.jpg" alt="">
-                        </div>
+		<div class="third-section">
+			<div class="card-block">
+				<div class="card">
+					<div class="img-block">
+						<img src="../../../ASSETS/services/Consultation/property1.jpg" alt="">
+					</div>
 
-                        <div class="text-block">
-                            <h3>Know the property</h3>
+					<div class="text-block">
+						<h3>Know the property</h3>
 
-                            <p>When buying a property, it's crucial to understand not just its physical features, but also its condition and age. This helps you weigh the pros and cons to make a well-informed decision. A detailed review of the property's condition is just as important as considering the purchase price and profitability. This ensures you're making a smart investment. <br>By doing your due diligence, you avoid ending up with a property that doesn't meet your needs or costs more than you anticipated. Make your real estate investment a successful one!</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-block">
-                            <img src="../../../ASSETS/services/Consultation/property2.jpg" alt="">
-                        </div>
+						<p>When buying a property, it's crucial to understand not just its physical features, but also its condition and age. This helps you weigh the pros and cons to make a well-informed decision. A detailed review of the property's condition is just as important as considering the purchase price and profitability. This ensures you're making a smart investment. <br>By doing your due diligence, you avoid ending up with a property that doesn't meet your needs or costs more than you anticipated. Make your real estate investment a successful one!</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="img-block">
+						<img src="../../../ASSETS/services/Consultation/property2.jpg" alt="">
+					</div>
 
-                        <div class="text-block">
-                            <h3>Verify the information</h3>
+					<div class="text-block">
+						<h3>Verify the information</h3>
 
-                            <p>Make sure you have all the necessary documents from the seller and give yourself enough time to review them. JKK Construction Services can help with this verification process. Request all relevant documents and contacts from the seller to speed things up. <br>We will check ownership documents, building plans, occupancy certificates, safety reports, environmental studies, and more to ensure everything is in order. It's also essential to review construction-related documents, warranties, past property uses, inspection reports, and land surveys. Trust JKK Construction Services to make sure everything checks out, so you can buy with confidence.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+						<p>Make sure you have all the necessary documents from the seller and give yourself enough time to review them. JKK Construction Services can help with this verification process. Request all relevant documents and contacts from the seller to speed things up. <br>We will check ownership documents, building plans, occupancy certificates, safety reports, environmental studies, and more to ensure everything is in order. It's also essential to review construction-related documents, warranties, past property uses, inspection reports, and land surveys. Trust JKK Construction Services to make sure everything checks out, so you can buy with confidence.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        
-        <footer>
-            <div class="footer-appointment">
-                <h1>Still Having Doubt about your plan <br>Contact Us!</h1>
 
-                <a href="../../../PAGES/appointment.php">Get an Appointment <i class="fa-regular fa-paper-plane"></i></a>
-            </div>
+	<footer>
+		<div class="footer-appointment">
+			<h1>Still Having Doubt about your plan <br>Contact Us!</h1>
 
-            <div class="contacts-permits">
-                <img src="../../../ASSETS/logo.png" alt="" class="logo">
+			<a href="../../../PAGES/appointment.php">Get an Appointment <i class="fa-regular fa-paper-plane"></i></a>
+		</div>
 
-                <div class="contacts">
-                    <div class="block">
-                        <div class="icon">
-                            <i class="fa-regular fa-envelope"></i>
-                        </div>
-                        <p>jjkconstructionservices@yahoo.com</p>
-                    </div>
-                    <div class="block">
-                        <div class="icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <p>046-501-8436 / 0998 552 5190 / 0928 453 1506</p>
-                    </div>
-                    <div class="block">
-                        <div class="icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <p>Lot 1 Block 6 Hidden Brooke Executive Village, Amaya 2, Tanza, Cavite</p>
-                    </div>
-                </div>
+		<div class="contacts-permits">
+			<img src="../../../ASSETS/logo.png" alt="" class="logo">
 
-                <div class="permits">
-                    <h3>LICENSE AND PERMITS</h3>
+			<div class="contacts">
+				<div class="block">
+					<div class="icon">
+						<i class="fa-regular fa-envelope"></i>
+					</div>
+					<p>jjkconstructionservices@yahoo.com</p>
+				</div>
+				<div class="block">
+					<div class="icon">
+						<i class="fa-solid fa-phone"></i>
+					</div>
+					<p>046-501-8436 / 0998 552 5190 / 0928 453 1506</p>
+				</div>
+				<div class="block">
+					<div class="icon">
+						<i class="fa-solid fa-location-dot"></i>
+					</div>
+					<p>Lot 1 Block 6 Hidden Brooke Executive Village, Amaya 2, Tanza, Cavite</p>
+				</div>
+			</div>
 
-                    <div class="img-block">
-                        <img src="../../../ASSETS/icons/dti.png" alt="">
-                        <img src="../../../ASSETS/icons/bir.png" alt="">
-                        <img src="../../../ASSETS/icons/tanza.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
+			<div class="permits">
+				<h3>LICENSE AND PERMITS</h3>
 
-        <script src="../../../script.js"></script>
-    </body>
+				<div class="img-block">
+					<img src="../../../ASSETS/icons/dti.png" alt="">
+					<img src="../../../ASSETS/icons/bir.png" alt="">
+					<img src="../../../ASSETS/icons/tanza.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="../../../script.js"></script>
+</body>
+
 </html>

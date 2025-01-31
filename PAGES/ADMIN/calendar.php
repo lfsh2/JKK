@@ -112,7 +112,7 @@
                 right: 'dayGridMonth,timeGridWeek,timeGridDay'
             },
             editable: true,
-            events: 'fetch_events.php',
+            events: 'calendar/fetch_events.php',
             dateClick: function (info) {
                 $('#event-id').val('');
                 $('#event-title').val('');
@@ -173,7 +173,7 @@
                 icon: $('#event-icon').val()
             };
 
-            var url = eventData.id ? 'update_event.php' : 'save_event.php';
+            var url = eventData.id ? 'calendar/update_event.php' : 'calendar/save_event.php';
 
             $.ajax({
                 url: url,
@@ -200,7 +200,7 @@
             if (eventId) {
                 if (confirm('Are you sure you want to delete this event?')) {
                     $.ajax({
-                        url: 'delete_event.php',
+                        url: 'calendar/delete_event.php',
                         type: 'POST',
                         data: { id: eventId },
                         dataType: 'json', 
@@ -232,7 +232,7 @@
             };
 
             $.ajax({
-                url: 'update_event.php',
+                url: 'calendar/update_event.php',
                 type: 'POST',
                 data: eventData,
                 dataType: 'json',

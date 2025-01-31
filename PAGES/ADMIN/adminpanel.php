@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header("Location: adminlogin.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,9 +45,9 @@
         
                 <button onclick="toggleDropdown('dropdown2', 'dropdown1', this)" class="sidebar-btn"><i class="fas fa-cog"></i> Settings</button>
                 <div class="dropdown" id="dropdown2">
-                    <a href="managefaqbot.php" target="contentFrame" class="sidebar-btn">Manage FAQ Bot</a>
-                    <a href="managetestimonials.php" target="contentFrame" class="sidebar-btn">Manage Testimonials</a>
-                    <a href="signup.php" target="contentFrame" class="sidebar-btn">Add Admin</a>
+                    <!--<a href="managefaqbot.php" target="contentFrame" class="sidebar-btn">Manage FAQ Bot</a>-->
+                    <a href="testimonials.php" target="contentFrame" class="sidebar-btn">Manage Testimonials</a>
+                   <!-- <a href="admin_register.php" target="contentFrame" class="sidebar-btn">Add Admin</a>-->
 
                 </div>
             </div>
@@ -51,7 +59,7 @@
     <div class="container">
         <nav>
             <!-- <i class="fas fa-sun"></i> -->
-            <i class="fas fa-user"></i>
+            <i class="fas fa-user"></i> 
         </nav>
 
         <div id="content">
@@ -83,7 +91,7 @@
         }
 
         function logOut() {
-            window.location.href = '../../home.php';
+            window.location.href = 'adminlogin.php';
         }
     </script>
 

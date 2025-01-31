@@ -23,7 +23,6 @@ $response = array('success' => false);
 
 if ($title && $date && $color && $icon) {
     if ($id) {
-        // Update existing event
         $stmt = $conn->prepare("UPDATE events SET title=?, date=?, description=?, color=?, icon=? WHERE id=?");
         $stmt->bind_param("sssssi", $title, $date, $description, $color, $icon, $id);
     } else {

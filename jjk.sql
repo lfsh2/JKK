@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2024 at 10:45 AM
+-- Generation Time: Jan 30, 2025 at 07:52 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `jjk`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_user`
+--
+
+CREATE TABLE `admin_user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin_user`
+--
+
+INSERT INTO `admin_user` (`id`, `username`, `password`) VALUES
+(2, 'admin', 'adminjkk');
 
 -- --------------------------------------------------------
 
@@ -60,17 +79,20 @@ CREATE TABLE `appointments` (
   `email` varchar(100) NOT NULL,
   `phone_number` varchar(15) NOT NULL,
   `appointment_date` date NOT NULL,
-  `appointment_time` time NOT NULL,
-  `status` enum('Pending','Completed','Canceled') DEFAULT 'Pending'
+  `appointment_time` varchar(20) DEFAULT NULL,
+  `status` enum('Pending','Approved','To be Resched','Reschedule','Completed','Cancelled') DEFAULT 'Pending',
+  `message` text DEFAULT NULL,
+  `service_type` enum('Build','Design','Consultation','Project Management') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `appointments`
 --
 
-INSERT INTO `appointments` (`id`, `client_name`, `email`, `phone_number`, `appointment_date`, `appointment_time`, `status`) VALUES
-(1, 'Suyen', 'suyensuyen@gmail.com', '092323232', '2024-09-11', '09:17:17', 'Completed'),
-(3, 'Dishan', 'edishanleetenorio03@gmail.com', '09299503384', '2024-09-25', '09:27:00', 'Pending');
+INSERT INTO `appointments` (`id`, `client_name`, `email`, `phone_number`, `appointment_date`, `appointment_time`, `status`, `message`, `service_type`) VALUES
+(17, 'Kent BeTouch', 'allenhairless@gmail.com', '092323231', '2025-02-08', '1-3pm', 'Reschedule', '', 'Build'),
+(18, 'Lee Tenorio', 'edishanleetenorio03@gmail.com', '0929950384', '2025-02-07', '1-3pm', 'Reschedule', 'urgent', 'Design'),
+(19, 'Lee Tenorio', 'edishanleetenorio03@gmail.com', '0929950384', '2025-01-31', '10-12pm', 'Cancelled', 'can i have an coffeee', 'Project Management');
 
 -- --------------------------------------------------------
 
@@ -93,8 +115,7 @@ CREATE TABLE `events` (
 
 INSERT INTO `events` (`id`, `title`, `date`, `description`, `color`, `icon`) VALUES
 (7, 'Meeting', '2024-09-18', 'Meeting with Ada Lovelace', '#00ff00', 'fas fa-birthday-cake'),
-(8, 'Business Meeting', '2024-09-20', 'Cooperaton between san miguel corp', '#0000ff', 'fas fa-star'),
-(9, 'DayOff', '2024-09-26', 'Walang Pask', '#0000ff', 'fas fa-briefcase');
+(8, 'Business Meeting', '2024-09-20', 'Cooperaton between san miguel corp', '#0000ff', 'fas fa-star');
 
 -- --------------------------------------------------------
 
@@ -111,6 +132,27 @@ CREATE TABLE `pending_users` (
   `mobile` varchar(15) NOT NULL,
   `password` varchar(255) NOT NULL,
   `verification_code` varchar(5) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pending_users`
+--
+
+INSERT INTO `pending_users` (`id`, `first_name`, `last_name`, `username`, `email`, `mobile`, `password`, `verification_code`, `created_at`) VALUES
+(15, 'Los', 'Ramos', 'Shan', 'edishanlee.tenorio@cvsu.edu.ph', '09248343241', '$2y$10$klJCwth9L4UmMPDfkwwC9.Re8JgzHCWDebZ1zYe6phXVXkDRS4im2', '60135', '2025-01-22 15:29:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `comment` text NOT NULL,
+  `approved` tinyint(1) DEFAULT 0,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -141,11 +183,20 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `mobile`, `password`, `created_at`, `verification_code`, `verified`, `password_reset_token`, `token_expiry`) VALUES
 (2, 'Lee', 'Tenorio', 'dishan', 'edishanleetenorio03@gmail.com', '0929950384', '$2y$10$JqqnPciaoJX/syCH8aDRMuTDHQ0KpB6VGT1MaCK5gNI5G6XYe7n46', '2024-09-19 15:39:17', NULL, 0, NULL, NULL),
-(4, 'Los', 'sol', 'solsol', 'allenhairless@gmail.com', '092323231', '$2y$10$BMhQZ8t65Xo/.rdRyTk33eLkkweS4K5oDNRQPdel4qM4xYvDyHnrW', '2024-09-19 16:16:19', NULL, 0, NULL, NULL);
+(4, 'Kent', 'Buendiva', 'Kentut', 'allenhairless@gmail.com', '092323231', '$2y$10$8vKz0OogWSy0D29j0K/W.emo6a/EEvx37zjNCJ7xlEfkfblhnE0xq', '2024-09-19 16:16:19', NULL, 0, NULL, '2025-01-24 16:10:41'),
+(8, 'shane', 'lot', 'shanel', 'dishantenorio03@gmail.com', '09824853456', '$2y$10$XLpujhndDQA0enpvNm8leuNK4gW/3.BMJmdX/obmrw/og1aFvOBFe', '2025-01-16 05:14:38', NULL, 0, NULL, NULL),
+(12, 'admin', 'jkk', 'admin', 'edishanlee03@icloud.com', '09299504493', '$2y$10$nAoUoNPGysBAprLrhkRUje5uMSNZnw/0MDrD887vAHmY0TWVX.GFW', '2025-01-22 08:57:56', NULL, 0, NULL, NULL);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin_user`
+--
+ALTER TABLE `admin_user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `analytics_data`
@@ -174,6 +225,12 @@ ALTER TABLE `pending_users`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -186,6 +243,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `admin_user`
+--
+ALTER TABLE `admin_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `analytics_data`
 --
 ALTER TABLE `analytics_data`
@@ -195,25 +258,31 @@ ALTER TABLE `analytics_data`
 -- AUTO_INCREMENT for table `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `pending_users`
 --
 ALTER TABLE `pending_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

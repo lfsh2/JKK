@@ -15,7 +15,7 @@ $id = $_GET['id'];
 $sql = "DELETE FROM appointments WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
-    header('Location: appointment_index.php');
+    header('Location: ../appointments.php');
 } else {
     echo "Error deleting record: " . $conn->error;
 }

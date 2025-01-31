@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointments</title>
     <link rel="stylesheet" href="../../CSS/adminadmin.css">
     <style>
-        body, html {
+        body,
+        html {
             width: 100%;
             padding: 15px;
             box-sizing: border-box;
@@ -14,7 +16,8 @@
             color: black;
         }
 
-        .group, h1 {
+        .group,
+        h1 {
             width: 100%;
             display: flex;
             align-items: center;
@@ -36,6 +39,7 @@
                 border: none;
                 border-radius: 10px;
             }
+
             .search {
                 display: flex;
 
@@ -47,12 +51,15 @@
                 }
             }
         }
+
         table {
             width: 100%;
             text-align: center;
             margin-top: 30px;
         }
-        th, td {
+
+        th,
+        td {
             padding: 15px;
             border-bottom: 1px solid black;
         }
@@ -66,6 +73,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="group">
         <h1>Client Details</h1>
@@ -114,8 +122,8 @@
                         <td>{$row['appointment_time']}</td>
                         <td>{$row['status']}</td>
                         <td>
-                            <a href='appointment_edit.php?id={$row['id']}'>Edit</a> |
-                            <a href='appointment_delete.php?id={$row['id']}' onclick='return confirm(\"Are you sure?\")'>Delete</a>
+                            <a href='./appointment/appointment_edit.php?id={$row['id']}'>Edit</a> |
+                            <a href='./appointment/appointment_delete.php?id={$row['id']}' onclick='return confirm(\"Are you sure?\")'>Delete</a>
                         </td>
                     </tr>";
             }
@@ -132,4 +140,5 @@
     </script>
 
 </body>
+
 </html>
