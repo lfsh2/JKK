@@ -1,0 +1,159 @@
+footer {
+    width: 100%;
+
+    .footer-appointment {
+        width: 100%;
+        height: 25vh;
+        background-position: center;
+        background-size: cover;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+
+        h1 {
+            -webkit-text-stroke: 1px black;
+        }
+
+        a {
+            padding: 10px 20px;
+            background: white;
+            color: black;
+            border-radius: 20px;
+            font-weight: bolder;
+            text-decoration: none;
+            transition: all 500ms;
+        }
+        a:hover {
+            background: black;
+            color: white;
+        }
+    }
+
+    .contacts-permits {
+        width: 100%;
+        height: 20vh;
+        padding: 20px 0;
+        background: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 30%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .contacts {
+            height: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+    
+            .block {
+                width: 100%;
+                display: flex;
+                gap: 20px;
+    
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                }
+                .icon::before {
+                    content: '';
+                    width: 30px;
+                    height: 30px;
+                    background: rgba(217, 217, 217, 0.36);
+                    border-radius: 50%;
+                    position: absolute;
+                }
+            }
+        }
+
+        .permits {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            h3 {
+                color: white;
+                text-align: center;
+            }
+
+            .img-block {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+
+                img {
+                    width: 100px;
+                    background: white;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
+
+@supports (-moz-appearance:none) {
+    footer {
+        .footer-appointment {
+            -webkit-text-stroke: initial;
+            -moz-text-stroke: 1px black;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    footer {
+        .footer-appointment {
+            height: auto;
+            padding: 20px;
+
+            h1 {
+                text-align: center;
+            }
+        }
+        
+        .contacts-permits {
+            height: auto;
+            flex-direction: column;
+            gap: 50px;
+
+            .logo {
+                width: 50%;
+            }
+
+            .contacts, .permits {
+                width: 100%;
+            }
+
+            .contacts {
+                align-items: center;
+                padding: 0 20px;
+
+                .block {
+                    align-items: center;
+                    font-size: 0.8rem;
+                }
+            }
+
+            .permits {
+                .img-block {
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

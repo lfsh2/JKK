@@ -1,0 +1,7 @@
+1. open task scheduler
+2. click create basic task 
+3. set daily and set the time for 10Am
+4. Start a program -> put the path of the send_reminder.php 
+localhost/jkk/pages/send_reminder.php
+5. Save and close the task scheduler
+

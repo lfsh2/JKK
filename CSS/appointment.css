@@ -1,0 +1,110 @@
+.appointment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)), url('../ASSETS/appointmentbg.jpg');
+    padding: 50px 20px;
+}
+
+.first-section {
+    width: 100%;
+    height: 25vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../ASSETS/landingbg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.first-section h1 {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.second-section {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin-top: -60px;
+}
+
+.client-details h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+    padding: 10px 15px;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text h1 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.text p {
+    font-size: 1rem;
+    color: #666;
+}

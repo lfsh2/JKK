@@ -1,0 +1,222 @@
+.chatbot-btn {
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 500ms ease;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1001;
+}
+
+.chatbot-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.chatbot-btn:hover {
+    transform: scale(1.1);
+}
+
+.chat-bot {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: all 500ms ease;
+    border-radius: 30px;
+    position: fixed;
+    right: 70px;
+    bottom: 50px;
+    z-index: 1000;
+    background: rgba(25, 33, 42, 0.95);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+
+    .chat-header {
+        height: 15%;
+        padding: 15px;
+        background: #19212A;
+        color: white;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .chat-header img {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        background: white;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+    
+    .chat {
+        height: 85%;
+        padding: 0 20px;
+        overflow: auto;
+        scrollbar-width: none;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .question-block {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .messages {
+        height: 150px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 5px;
+        overflow: auto;
+    }
+
+    .chat-message {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+        padding: 10px;
+        border-radius: 20px;
+        max-width: 80%;
+        word-wrap: break-word;
+        position: relative;
+    }
+
+    .chat-message.user {
+        background: #d4f1f4;
+        align-self: flex-end;
+        text-align: left;
+    }
+
+    .chat-message.bot {
+        background: #e2e2e2;
+        align-self: flex-start;
+        text-align: left;
+    }
+    
+    .questions {
+        height: 150px;
+    }
+    
+    .questions p {
+        height: auto;
+        padding: 10px 0;
+        color: white;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+    
+    .questions .text-block {
+        height: 150px;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 5px;
+        overflow: auto;
+    }
+    
+    .questions .text-block button {
+        padding: 10px;
+        font-size: 0.8rem;
+        background-color: #f0f0f0;
+        border: none;
+        border-radius: 20px;
+        text-align: left;
+        cursor: pointer;
+        transition: background-color 300ms ease;
+    }
+    
+    .questions .text-block button:hover {
+        background-color: #d1d1d1;
+    }
+    
+    .questions::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .chat-box {
+        width: 100%;
+        height: 10%;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .chat-box input {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        font-weight: bold;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .chat-box input::placeholder {
+        font-weight: bold;
+    }
+    
+    .chat-box button {
+        width: 20%;
+        height: 100%;
+        color: white;
+        background: #19212A;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 300ms ease;
+    }
+    
+    .chat-box button:hover {
+        background-color: #151a22;
+    }
+}
+
+.chat-bot.active {
+    width: 400px;
+    height: 500px;
+    opacity: 1;
+    right: 100px;
+    bottom: 50px;
+    transition: all 500ms ease;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+@media screen and (max-width: 992px) {
+    .chat-bot.active {
+        width: 95%;
+        right: 15px;
+        bottom: 80px;
+    }
+}

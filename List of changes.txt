@@ -1,0 +1,37 @@
+List of changes:
+Needs Progress:
+Admin Side
+- FAQ's (sa loob ng chatbot) -WORK8NG
+- Editing pages PAG MAY HOSTING NA PARA TIPID SA STORAGE
+
+DONE-----------------------------------
+- Plotting of schedule appointment sa calendar	 once approved yung appointment
+
+
+dDONE---------------------------
+Need change/s:
+In User Side
+Edit Profile
+Name
+- Dadagdagan ng middle name
+- First Name, middle name, last name 30 characters no special character and no numbers.
+-----------------------------------------------
+
+Reschedule
+- Date and time will not be clickable once already booked by the user/client.
+- If multiple bookings that made by user, pwede mapili ni user kung ano yung appointment na gusto niya i-resched.
+
+Appointment
+- Pwede mabook ni user yung same date pero yung time, service hindi clickable once na booked na yun ni user.
+
+- Limit dun sa pagbook ng appointment ng calendar (ex. within 5 months lang sa calendar yung pwede ma-view at ma-book ni user)
+
+Contact Us Section
+- Putting contact us section in the system.
+WDYM BY THIS??
+---YOU HAVE THE FOOTER SECTION 4234244452 
+ 
+
+DONE--------------------------------------
+Admin Side:
+- Color coding of status in 'appointments'

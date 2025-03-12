@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    
+    .navbar {
+        width: 100%;
+        padding: 10px;
+        background: #e0dcbc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .logo {
+            width: 150px;
+    
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    
+        .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+    
+            a, button {
+                padding: 5px 30px;
+                border: 2px solid black;
+                border-radius: 20px;
+                background: none;
+                color: black;
+                font-size: 1rem;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                transition: all 500ms;
+            }
+    
+            a:hover, button:hover {
+                background: black;
+                color: white;
+            }
+
+            .dropdown {
+                .dropdown-block {
+                    padding: 20px 10px 0 0;
+                    display: none;
+                    position: absolute;
+
+                    .dropdown-content {
+                        min-width: 230px;
+                        padding: 10px;
+                        background: black;
+                        border-radius: 10px;
+                        z-index: 1;
+                    }
+        
+                    .dropdown-content button, .dropdown-content a {
+                        width: 100%;
+                        padding: 5px;
+                        color: white;
+                        text-decoration: none;
+                        text-align: left;
+                        display: block;
+                    }
+                    .submenu {
+                        min-width: 250px;
+                        padding: 10px;
+                        background: black;
+                        border-radius: 10px;
+                        z-index: 1;
+                        display: none;
+                        position: absolute;
+                        left: 100%;
+                        top: 10%;
+                    }
+                    
+                    .submenu.active {
+                        display: block;
+                    }
+                }
+            }
+            .dropdown:hover .dropdown-block {
+                display: block;
+            }
+        }
+    
+        .admin-login {
+            a {
+                padding: 5px 30px;
+                border: 2px solid black;
+                border-radius: 20px;
+                background: black;
+                color: white;
+                font-size: 1rem;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                transition: all 500ms;
+            }
+    
+            a:hover {
+                background: white;
+                color: black;
+            }
+        }
+    
+        .toggle-btn {
+            display: none;
+            background: none;
+			color: black;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    .responsive-links {
+        width: 95%;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+
+        .links {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .nav-btn, .user-login button {
+            width: 100%;
+            padding: 20px;
+            background: none;
+			outline: none;
+			border: none;
+            color: white;
+            text-align: left;
+            font-size: 1rem;
+            text-decoration: none;
+			cursor: pointer;
+        }
+
+        .service {
+            width: 100%;
+            padding: 20px 70% 20px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            position: relative;
+
+            i {
+                position: absolute;
+                right: 10px;
+            }
+        }
+
+        .dropdown {
+            width: 100%;
+        }
+
+        .responsive-service-btn {
+            width: 100%;
+            padding-right: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                width: 100%;
+            }
+            button {
+                height: 100%;
+                background: none;
+                border: none;
+                text-align: center;
+                color: white;
+                font-size: 1rem;
+            }
+        }
+
+        .dropdown-content {
+            display: none;  
+
+            .project {
+                width: 95%;
+                margin: auto;
+                display: flex;
+                gap: 5px;
+            }
+
+            .dropdown-subMenu {
+                width: 95%;
+                margin: auto;
+                position: relative;
+
+                button {
+                    border: none;
+                }
+
+                i {
+                    position: absolute;
+                    right: 10px;
+                }
+            }
+
+            .submenu-content {
+                width: 95%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                display: none;
+
+                a {
+                    width: 100%;
+                    display: inline-block;
+                }
+            }
+
+            .dropdown-subMenu.active .submenu-content {
+                display: block;
+            }
+        }
+    }
+
+    .responsive-links.active {
+        display: block;
+    }
+}
+
+
+
+@media screen and (max-width: 992px) {
+    header {
+        .navbar {
+            padding: 10px 20px;
+    
+            .links {
+                display: none;
+            }
+    
+            .user-login {
+                display: none;
+            }
+    
+            .toggle-btn {
+                display: block;
+            }
+        }
+    }
+}
+
+
+.navbar .user-login button {
+	padding: 5px 30px;
+	border: 2px solid black;
+	border-radius: 20px;
+	background: none;
+	color: black;
+	font-size: 1rem;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 500ms;
+}
+.user-login button:hover {
+	background: black;
+	color: white;
+}
+
+
